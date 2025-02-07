@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;} .row.custom-gap {
+      row-gap: 30px;
+    }</style>
   </head>
   <body>
     <div class="preloader">
@@ -88,41 +90,74 @@
               <div class="row justify-content-center">
                 <div class="col-12 col-xl-9 col-xxl-12">
                   <div class="row row-15 row-md-15 gutters-10 gutters-md-30">
-                    <div class="col-6 col-lg-4" style="width:400px; height: 292px;">
-                      <div class="tilter"><a class="figure-classic" href="portret.html"><img src="images/portret/portret1.JPG" style="width:100%;" alt="" width="400" height="292"/>
-                          <div class="figure-classic-inner">
-                            <div class="title">Portret</div>
-                          </div></a></div>
-                    </div>
-                    <div class="col-6 col-lg-4" style="width:400px; height: 292px;">
-                      <div class="tilter"><a class="figure-classic" href="fashion.html"><img src="images/fashion/fashion6.JPG" style="width:100%;" alt="" width="400" height="292"/>
-                          <div class="figure-classic-inner">
-                            <div class="title">Fashion</div>
-                          </div></a></div>
-                    </div>
-                    <div class="col-6 col-lg-4" style="width:400px; height: 292px;">
-                      <div class="tilter"><a class="figure-classic" href="natuur.html"><img src="images/natuur/natuur4.jpg" style="width:100%;" alt="" width="400" height="292"/>
-                          <div class="figure-classic-inner">
-                            <div class="title">Natuur</div>
-                          </div></a></div>
-                    </div>
-                    <div class="col-6 col-lg-4" style="width:400px; height: 292px;">
-                      <div class="tilter"><a class="figure-classic" href="stills.html"><img src="images/stills/still2.png" style="width:100%;" alt="" width="400" height="292"/>
-                          <div class="figure-classic-inner">
-                            <div class="title">Stills</div>
-                          </div></a></div>
-                    </div>
-                    <div class="col-6 col-lg-4" style="width:400px; height: 292px;">
-                      <div class="tilter"><a class="figure-classic" href="architrctuur.html"><img src="images/architectuur/architectuur2.jpg" style="width:100%;" alt="" width="400" height="292"/>
-                          <div class="figure-classic-inner">
-                            <div class="title">Architrctuur</div>
-                          </div></a></div>
-                    </div>
-                    <div class="col-6 col-lg-4" style="width:400px; height: 292px;">
-                      <div class="tilter"><a class="figure-classic" href="videos.html"><img src="images/videos/still 2.jpg" style="width:100%;" alt="" width="400" height="292"/>
-                          <div class="figure-classic-inner">
-                            <div class="title">Video's</div>
-                          </div></a></div>
+                    <div class="container">
+                      <div class="row custom-gap">
+                        <div class="col-6 col-md-4">
+                          <div class="tilter">
+                            <a class="figure-classic" href="portret.html">
+                              <img src="images/portret/portret1.JPG" class="img-fluid" alt="Portret">
+                              <div class="figure-classic-inner">
+                                <div class="title">Portret</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                    
+                        <div class="col-6 col-md-4">
+                          <div class="tilter">
+                            <a class="figure-classic" href="fashion.html">
+                              <img src="images/fashion/fashion6.JPG" class="img-fluid" alt="Fashion">
+                              <div class="figure-classic-inner">
+                                <div class="title">Fashion</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                    
+                        <div class="col-6 col-md-4">
+                          <div class="tilter">
+                            <a class="figure-classic" href="natuur.html">
+                              <img src="images/natuur/natuur4.jpg" class="img-fluid" alt="Natuur">
+                              <div class="figure-classic-inner">
+                                <div class="title">Natuur</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                    
+                        <div class="col-6 col-md-4">
+                          <div class="tilter">
+                            <a class="figure-classic" href="stills.html">
+                              <img src="images/stills/still2.png" class="img-fluid" alt="Stills">
+                              <div class="figure-classic-inner">
+                                <div class="title">Stills</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                    
+                        <div class="col-6 col-md-4">
+                          <div class="tilter">
+                            <a class="figure-classic" href="architrctuur.html">
+                              <img src="images/architectuur/architectuur2.jpg" class="img-fluid" alt="Architectuur">
+                              <div class="figure-classic-inner">
+                                <div class="title">Architectuur</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                    
+                        <div class="col-6 col-md-4">
+                          <div class="tilter">
+                            <a class="figure-classic" href="videos.html">
+                              <img src="images/videos/still 2.jpg" class="img-fluid" alt="Video's">
+                              <div class="figure-classic-inner">
+                                <div class="title">Video's</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
