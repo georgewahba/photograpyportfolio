@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coming Soon - Photos by Gogo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,700|Merriweather:300,400,700">
+    
+    <style>
+        /* Animated Gradient Background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            background-size: 400% 400%;
+            animation: gradientMove 10s infinite alternate;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Box container */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+            max-width: 500px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #f5a623, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* Countdown Styling */
+        #countdown {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Food Message Styling */
+        #food-message {
+            font-size: 1.2em;
+            margin-top: 15px;
+            color: #f5a623;
+            font-weight: 600;
+        }
+    </style>
+
+    <script>
+        function startCountdown() {
+            const countdownDate = new Date();
+            countdownDate.setDate(countdownDate.getDate() + 999);
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = countdownDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                let foodMessage = "Plenty of time to grab a snack! 🍕";
+                if (days < 100) foodMessage = "Almost there! Maybe get some popcorn? 🍿";
+                if (days < 10) foodMessage = "The final countdown! Get your coffee ready! ☕";
+                if (days < 1) foodMessage = "It's happening soon! No time for snacks! 🚀";
+
+                if (timeLeft < 0) {
+                    document.getElementById("countdown").innerHTML = "We are live!";
+                    document.getElementById("food-message").innerHTML = "";
+                } else {
+                    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    document.getElementById("food-message").innerHTML = foodMessage;
+                }
+            }
+
+            setInterval(updateCountdown, 1000);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+    <div class="container">
+        <h1>Photos by Gogo</h1>
+        <h3>We are launching soon!</h3>
+        <div id="countdown"></div>
+        <div id="food-message"></div>
+    </div>
+</body>
+</html>
